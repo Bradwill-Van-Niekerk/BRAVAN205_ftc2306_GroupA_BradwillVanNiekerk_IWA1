@@ -15,28 +15,28 @@ const sarahPostal = "0310";
 
 //objects containing data for Leo and Sarah.
 const leo = {
-  name: `${leoName}`,
+  name: leoName,
   balance: parseFloat(leoBalance).toFixed(2),
   access_id: "47afb389-8014-4d0b-aff3-e40203d2107f",
   age: 24,
   address: {
-    number: `${leoNumber}`,
-    street: `${leoStreet}`,
-    postal_code: `${leoPostal}`,
+    number: leoNumber,
+    street: leoStreet,
+    postalCode: leoPostal,
   },
 };
 
 const sarah = {
-  name: `${sarahName.trimEnd()} ${sarahSurname}`,
+  name: `${sarahName.trim()} ${sarahSurname}`,
   age: 62,
   access_id: "6b279ae5-5657-4240-80e9-23f6b635f7a8",
   balance: parseFloat(sarahBalance).toFixed(2),
   address: {
-    number: `${sarahNumber}`,
-    street: `${sarahStreet}`,
-    postal_code: `${sarahPostal}`,
+    number: sarahNumber,
+    street: sarahStreet,
+    postalCode: sarahPostal,
   },
 };
 
-console.log(leo);
-console.log(sarah);
+console.log(leo, leo["address"]["postalCode"]);
+console.log(sarah, sarah["address"]["postalCode"]);
