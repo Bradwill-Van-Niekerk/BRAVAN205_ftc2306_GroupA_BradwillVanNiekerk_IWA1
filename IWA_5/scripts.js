@@ -5,10 +5,14 @@ const BANNED_WARNING =
 
 // User info
 const area = "RSA"; // Country, 'RSA' for South Africa
-const currency = "R"; // Currency, 'R' for South African Rand
-const customers = 1; // Number of customers
+// const currency = "R"; // Currency, 'R' for South African Rand
+const customers = 2; // Number of customers
 
 let shipping = 0; // defining shipping
+
+//if statment for currency depending on country
+if (area==="RSA"){currency = "R"}
+else {currency = "$"}
 
 // Check where the user is located
 if (area === "RSA") {
@@ -37,7 +41,7 @@ if (totalCost >= 1000 && customers === 1) {
 }
 
 // Check if you need to show any warnings or prices
-if (shipping === 0 && customers !== 1) {
+if (totalCost >=1000 && customers !== 1) {
   console.log(FREE_WARNING);
 } else if (area === "NK") {
   console.log(BANNED_WARNING);
