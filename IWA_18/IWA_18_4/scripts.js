@@ -97,6 +97,7 @@ const handleAddToggle = (event) => {
     html.add.form.reset();
 };
 
+//opens up edit form, and populates the data from the order into the edit form
  const handleEditToggle = (event) => {
     const targetOrder = event.target.closest('.order');
     const isEditOpen = html.edit.overlay;
@@ -119,6 +120,7 @@ const handleAddToggle = (event) => {
  };
 };
 
+//submit for edit changes the data when changed on form 
 const handleEditSubmit = (event) => {
     event.preventDefault();
     const currentOrderId = html.edit.id.value
